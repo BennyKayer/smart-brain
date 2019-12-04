@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+// Components
+import Navigation from "./components/navigation/navigation.component.jsx";
+import Logo from "./components/logo/logo.component.jsx";
+import ImageLinkForm from "./components/image-link-form/image-link-form.component.jsx";
+import FaceRecognition from "./components/face-recognition/face-recognition.component.jsx";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Navigation />
+            <Logo />
+            <ImageLinkForm />
+            <FaceRecognition />
+        </div>
+    );
 }
 
 export default App;
