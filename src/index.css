@@ -1,10 +1,10 @@
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
+    font-family: "Courier New", Courier, monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100vw;
+    height: 100vh;
 
     background-image: radial-gradient(
         circle,
@@ -12,11 +12,10 @@ body {
         rgb(253, 212, 119) 50%,
         rgb(253, 179, 119) 100%
     );
-
-    width: 100vw;
-    height: 100vh;
 }
-
+button {
+    cursor: pointer;
+}
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
