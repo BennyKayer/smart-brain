@@ -2,9 +2,9 @@ import React from "react";
 
 const Rank = () => {
     return (
-        <div>
-            <div className="white f3">{"Paweł your current rank is"}</div>
-            <div className="white f5">{"#1"}</div>
+        <div className="center header">
+            <div className="black f3">{"Paweł your current rank is"}</div>
+            <div className="black f1">{"#1"}</div>
         </div>
     );
 };
