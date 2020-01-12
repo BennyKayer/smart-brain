@@ -42,6 +42,12 @@ class App extends React.Component {
         };
     };
 
+    // componentDidMount() {
+    //     fetch("http://localhost:4200/")
+    //         .then(response => response.json())
+    //         .then(data => console.log(data));
+    // }
+
     displayFaceBox = box => {
         console.log(box);
         this.setState({ box: box });
