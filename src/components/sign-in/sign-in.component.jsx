@@ -15,6 +15,7 @@ class SignIn extends React.Component {
     onPasswordChange = event => {
         this.setState({ signInPassword: event.target.value });
     };
+    // Start server => postman register
     onSubmitSignIn = event => {
         const { signInPassword, signInEmail } = this.state;
         const { onRouteChange } = this.props;

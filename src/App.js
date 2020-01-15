@@ -24,9 +24,18 @@ class App extends React.Component {
             imageUrl: "",
             box: {},
             route: "signin",
-            isSignedIn: false
+            isSignedIn: false,
+            currentUser: null
         };
     }
+
+    setCurrentUser = user => {
+        this.setState({
+            currentUser: {
+                ...user
+            }
+        });
+    };
 
     calculateFaceLocation = data => {
         const clarifaiFace =
@@ -101,7 +110,10 @@ class App extends React.Component {
                 ) : this.state.route === "signin" ? (
                     <SignIn onRouteChange={this.onRouteChange} />
                 ) : (
-                    <Register onRouteChange={this.onRouteChange} />
+                    <Register
+                        onRouteChange={this.onRouteChange}
+                        setCurrentUser={this.setCurrentUser}
+                    />
                 )}
             </div>
         );
