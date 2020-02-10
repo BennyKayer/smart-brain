@@ -17,8 +17,7 @@ class SignIn extends React.Component {
     };
     // Start server => postman register
     onSubmitSignIn = event => {
-        const { signInPassword, signInEmail } = this.state;
-        const { onRouteChange } = this.props;
+        const { onRouteChange, setCurrentUser } = this.props;
 
         event.preventDefault();
 
@@ -26,13 +25,14 @@ class SignIn extends React.Component {
             method: "post",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                email: signInEmail,
-                password: signInPassword
+                email: this.state.signInEmail,
+                password: this.state.signInPassword
             })
         })
             .then(response => response.json())
-            .then(data => {
-                if (data !== "user not found") {
+            .then(user => {
+                if (user.id) {
+                    setCurrentUser(user);
                     onRouteChange("home");
                 }
             });

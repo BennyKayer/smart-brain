@@ -72,7 +72,7 @@ class App extends React.Component {
             .predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
             .then(response => {
                 if (response) {
-                    fetch("http://localhost:3000/image", {
+                    fetch("http://localhost:4200/image", {
                         method: "put",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({
@@ -129,7 +129,10 @@ class App extends React.Component {
                         />
                     </div>
                 ) : this.state.route === "signin" ? (
-                    <SignIn onRouteChange={this.onRouteChange} />
+                    <SignIn
+                        onRouteChange={this.onRouteChange}
+                        setCurrentUser={this.setCurrentUser}
+                    />
                 ) : (
                     <Register
                         onRouteChange={this.onRouteChange}

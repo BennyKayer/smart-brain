@@ -20,7 +20,7 @@ class Register extends React.Component {
         this.setState({ name: event.target.value });
     };
     onSubmit = event => {
-        const { registerPassword, registerEmail, registerName } = this.state;
+        const { registerPassword, registerEmail } = this.state;
         const { onRouteChange, setCurrentUser } = this.props;
 
         event.preventDefault();
@@ -31,7 +31,7 @@ class Register extends React.Component {
             body: JSON.stringify({
                 email: registerEmail,
                 password: registerPassword,
-                name: registerName
+                name: this.state.name
             })
         })
             .then(response => response.json())
