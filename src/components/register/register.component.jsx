@@ -25,7 +25,7 @@ class Register extends React.Component {
 
         event.preventDefault();
 
-        fetch("http://localhost:4200/register", {
+        fetch("https://pure-oasis-02531.herokuapp.com/register", {
             method: "post",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
